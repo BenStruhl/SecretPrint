@@ -1,6 +1,6 @@
 {
   "name": "secretprint",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "a small javascript library for printing files silently without prompt. ",
   "main": "index.js",
   "scripts": {
@@ -27,11 +27,12 @@
   },
   "homepage": "https://github.com/BenStruhl/SecretPrint#readme",
   "devDependencies": {
-    "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
     "mocha": "^5.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "node-powershell": "^3.3.1"
+  }
 }

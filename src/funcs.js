@@ -1,26 +1,23 @@
 
 const fs = require('fs');
+const shell = require('node-powershell');
 
 export const detectOS = () => {
-    var userAgent = window.navigator.userAgent,
-    platform = window.navigator.platform,
-    macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
-    windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
-    iosPlatforms = ['iPhone', 'iPad', 'iPod'],
-    os = null;
-
-if (macosPlatforms.indexOf(platform) !== -1) {
-  os = 'Mac OS';
-} else if (iosPlatforms.indexOf(platform) !== -1) {
-  os = 'iOS';
-} else if (windowsPlatforms.indexOf(platform) !== -1) {
-  os = 'Windows';
-} else if (/Android/.test(userAgent)) {
-  os = 'Android';
-} else if (!os && /Linux/.test(platform)) {
-  os = 'Linux';
+  let platform = process.platform;
+  let os = '';
+  console.log('detected OS: ' + platform);
+  if(platform === 'linux' || platform === 'darwin') {
+    os = 'unix';
+  } else if(platform === 'win32') {
+    os = 'windows';
+  } else {
+    throw console.error('unsupported OS');
+  }
+  return os;
 }
 
-console.log("detected OS: " + os)
-return os;
+export const printWindows = (file, printer)  => {
+
 }
+
+
