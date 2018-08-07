@@ -19,7 +19,6 @@ export const detectOS = () => {
 }
 
 export const printWindows = (file, printer)  => {
-    console.log('Printing:' + file)
     let finalPath = 'C:\\Windows\\System32\\mspaint.exe /pt ' + file;
     if(printer != null) {
       finalPath +=  + ' \'' +  printer +'\'';
@@ -27,11 +26,26 @@ export const printWindows = (file, printer)  => {
     exec( finalPath, (err, stdout, stderr) => {
       if (err) {
         // node couldn't execute the command
+        console.log("stdout: " + stdout);
+        console.log("stderr: " + stderr);
         return;
       }
     });
+    return true;
 }
 
 export const printUnix = (file, printer) => {
-
+  // let finalPath = 'C:\\Windows\\System32\\mspaint.exe /pt ' + file;
+  // if(printer != null) {
+  //   finalPath +=  + ' \'' +  printer +'\'';
+  // }
+  exec( finalPath, (err, stdout, stderr) => {
+    if (err) {
+      // node couldn't execute the command
+      console.log("stdout: " + stdout);
+      console.log("stderr: " + stderr);
+      return;
+    }
+  });
+  return true;
 }
