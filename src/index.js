@@ -1,6 +1,6 @@
 "use strict";
 
-import { detectOS, printUnix, printWindows } from "funcs";
+import { detectOS, printFile } from "funcs";
 
 /** 
  * Prints a file silently to a given printer, 
@@ -12,9 +12,9 @@ import { detectOS, printUnix, printWindows } from "funcs";
 module.exports = function print(file, printer) {
    var os =  detectOS();
    if (os === 'unix') {
-    printUnix(file, printer);   
+    printFile(file, printer, true);   
    } else if(os === 'windows') {
-    printWindows(file, printer);
+    printFile(file, printer, false);
    } else {
     throw new console.error("OS given is not supported");
    }
