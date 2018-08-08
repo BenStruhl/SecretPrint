@@ -30,7 +30,8 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "ipp-printer": "^1.0.0"
   },
   "dependencies": {
     "node-powershell": "^3.3.1"

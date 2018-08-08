@@ -1,4 +1,4 @@
-import { detectOS } from "../src/funcs"
+import { detectOS, printFile } from "../src/funcs"
 
 const expect = require('chai').expect;
 
@@ -9,4 +9,8 @@ describe('funcs', function() {
             str === 'windows';
         });
     });
+    it('should not error out on printing a document', function() {
+        let isWindows = detectOS() === 'windows' ? true :  false;
+        expect(printFile('..\\SecretPrint\\resources\\crab.png', null, isWindows))
+    })
 });
