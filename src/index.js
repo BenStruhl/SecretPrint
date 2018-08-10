@@ -1,6 +1,6 @@
 "use strict";
 
-import { detectOS, printFile } from "funcs";
+import { detectOS, printFile } from "./funcs";
 
 /** 
  * Prints a file silently to a given printer, 

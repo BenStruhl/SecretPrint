@@ -9,8 +9,8 @@ describe('funcs', function() {
             str === 'windows';
         });
     });
-    it('should not error out on printing a document', function() {
+    it('should not error out on printing a document that exists to a specific printer', function() {
         let isWindows = detectOS() === 'windows' ? true :  false;
-        expect(printFile('..\\SecretPrint\\resources\\crab.png', null, isWindows))
+        expect(printFile('..\\SecretPrint\\resources\\crab.png', 'test', isWindows))
     })
 });

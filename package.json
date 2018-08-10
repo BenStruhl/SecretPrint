@@ -34,6 +34,5 @@
     "ipp-printer": "^1.0.0"
   },
   "dependencies": {
-    "node-powershell": "^3.3.1"
   }
 }

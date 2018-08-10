@@ -1,7 +1,5 @@
 
 const fs = require('fs');
-const shell = require('node-powershell');
-
 const { exec } = require('child_process');
 
 /** 
@@ -37,14 +35,14 @@ export const detectOS = () => {
 export const printFile = (file, printer, isUnix)  => {
   let finalPath = '';
   if(isUnix) {
-    finalPath = 'C:\\Windows\\System32\\mspaint.exe /pt ' + file;
+    finalPath = 'C:\\Windows\\System32\\mspaint.exe /pt ' + '\"' + file +'\"';
     if(printer != null) {
-      finalPath +=  + ' \'' +  printer +'\'';
+      finalPath = finalPath  + ' \"' +  printer +'\"';
     }
   } else { 
-    finalPath = 'lpr ' + file;
+    finalPath = 'lpr ' +'\"' + file + '\"';
     if(printer != null) {
-      finalPath +=  + ' -P ' + printer;
+      finalPath +=  + ' -P ' + '\"' + printer + '\"';
     }
   } 
     exec( finalPath, (err, stdout, stderr) => {
@@ -52,9 +50,8 @@ export const printFile = (file, printer, isUnix)  => {
         // node couldn't execute the command
         console.log("stdout: " + stdout);
         console.log("stderr: " + stderr);
-        return;
+        throw new error()
       }
     });
-    return true;
   
 }
