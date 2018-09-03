@@ -11,9 +11,9 @@ import { detectOS, printFile } from "./funcs";
  */
 module.exports = function print(file, printer) {
    var os =  detectOS();
-   if (os === 'unix') {
+   if (os === "unix") {
     printFile(file, printer, true);   
-   } else if(os === 'windows') {
+   } else if(os === "windows") {
     printFile(file, printer, false);
    } else {
     throw new console.error("OS given is not supported");
