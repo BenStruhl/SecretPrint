@@ -39,11 +39,9 @@ export const printFile = (file, printer, isUnix)  => {
     }
   } else { 
     finalPath = "lpr " + "\"" + file + "\"";
-    console.log("prematureFinalPath: " + finalPath)
     if(printer != null) {
       finalPath =  finalPath +  " -P \"" + printer + "\"";
     }
-    console.log("finalPath: " + finalPath)
   } 
     exec( finalPath, (err, stdout, stderr) => {
       if (err) {
