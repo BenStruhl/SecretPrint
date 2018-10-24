@@ -1,6 +1,7 @@
 SecretPrint
 =========
 
+[![GitHub license](https://img.shields.io/github/license/BenStruhl/SecretPrint.svg)](https://github.com/BenStruhl/SecretPrint/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/BenStruhl/SecretPrint.svg)](https://github.com/BenStruhl/SecretPrint/stargazers)
 
 
