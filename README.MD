@@ -5,7 +5,7 @@ SecretPrint
 [![GitHub stars](https://img.shields.io/github/stars/BenStruhl/SecretPrint.svg)](https://github.com/BenStruhl/SecretPrint/stargazers)
 
 
-A small javascript library for printing files silently without a prompt. 
+a small javascript library for printing files silently without a prompt. 
 
 ## Installation 
 
