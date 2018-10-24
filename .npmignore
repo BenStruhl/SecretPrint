@@ -1,2 +1,5 @@
 .git*
 test/
+.babelr
+resources/
+printer.js
