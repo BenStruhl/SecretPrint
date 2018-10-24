@@ -4,8 +4,8 @@
   "description": "a small javascript library for printing files silently without prompt. ",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register --reporter spec",
-    "build": "babel src --presets env --out-dir dist"
+    "test": "mocha --timeout 300 --compilers js:babel-register --reporter spec",
+    "build": "babel src/test/ --presets env --out-dir dist"
   },
   "repository": {
     "type": "git",

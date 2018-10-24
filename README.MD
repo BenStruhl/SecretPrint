@@ -9,11 +9,11 @@ As small javascript library for printing files silently without prompt.
 
 ## Installation 
 
-    'npm install secretPrint'
+    'npm install secretprint'
 
 ## Usage 
 
-    TODO
+    secretprint("file to print", "name of specific printer (optional)") 
 
 ## Tests
 
