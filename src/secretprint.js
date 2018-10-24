@@ -1,6 +1,6 @@
 "use strict";
 
-import { detectOS, printFile } from "./funcs";
+var funcs = require("funcs")
 
 /** 
  * Prints a file silently to a given printer, 
@@ -10,11 +10,11 @@ import { detectOS, printFile } from "./funcs";
  * @param {string} printer
  */
 module.exports = function print(file, printer) {
-   var os =  detectOS();
+   var os =  funcs.detectOS();
    if (os === "unix") {
-    printFile(file, printer, true);   
+    funcs.printFile(file, printer, true);   
    } else if(os === "windows") {
-    printFile(file, printer, false);
+    funcs.printFile(file, printer, false);
    } else {
     throw new console.error("OS given is not supported");
    }
