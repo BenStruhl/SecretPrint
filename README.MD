@@ -1,6 +1,8 @@
 SecretPrint
 =========
-https://img.shields.io/github/license/mashape/apistatus.svg
+
+[![GitHub stars](https://img.shields.io/github/stars/BenStruhl/SecretPrint.svg)](https://github.com/BenStruhl/SecretPrint/stargazers)
+
 
 As small javascript library for printing files silently without prompt. 
 
