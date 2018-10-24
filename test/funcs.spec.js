@@ -1,5 +1,4 @@
-import { detectOS, printFile } from "../src/funcs";
-import { printer } from "../src/printer";
+import { detectOS } from "../src/funcs";
 
 const expect = require("chai").expect;
 const assert = require("chai").assert;
@@ -13,14 +12,7 @@ const path = require("path");
  * @param {Done} done
  * @param {Function} f
  */
-let check = ( done, f ) => {
-    try {
-      f();
-      done();
-    } catch( e ) {
-      done( e );
-    }
-  }
+
 
 describe("funcs", function() {
     it("should have detected the right OS of the platform", function() {
@@ -39,12 +31,5 @@ describe("funcs", function() {
           assert.throw(detectOS, "Unsupported OS Error: Use MacOS, Windows, or Linux");
         }
     });
-    it("should not error out on printing a document that exists to a specific printer", function() {
-        let detectedOS = detectOS();
-        let isUnix = (detectedOS === "unix");
-        let absolutePath = path.resolve("../SecretPrint/resources/crab.png");
-        // printFile(absolutePath, "SecretPrintTest", isUnix);
-        // if(printer.jobs.length != 0)
-        //     expect(printer.jobs[0].name).to.equal("crab.png");
-        });
+    it("should not error out on printing a document that exists to a specific printer");
     });
