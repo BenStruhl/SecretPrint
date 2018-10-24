@@ -5,7 +5,7 @@ SecretPrint
 [![GitHub stars](https://img.shields.io/github/stars/BenStruhl/SecretPrint.svg)](https://github.com/BenStruhl/SecretPrint/stargazers)
 
 
-As small javascript library for printing files silently without prompt. 
+As small javascript library for printing files silently without a prompt. 
 
 ## Installation 
 
@@ -18,13 +18,7 @@ require the package and then call it by giving it a file to print and optionally
     SecretPrint("file to print", "name of specific printer (optional)") 
 
 ## Tests
-
-for the tests to run properly you must first run 
-
-    'ipp-printer'
-
-and then add the printer SecretPrintTest manually to your list of printers and make it your default printer.
-Then run all the tests by running    
+run the command below to run all the tests. More will be added in the future to ensure that the file that was sent to be printed was the same file printed by the printer.   
 
     'npm test'
 
