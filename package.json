@@ -1,6 +1,6 @@
 {
   "name": "secretprint",
-  "version": "0.1.43",
+  "version": "0.1.5",
   "description": "a small javascript library for printing files silently without prompt. ",
   "main": "index.js",
   "scripts": {
