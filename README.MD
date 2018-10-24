@@ -13,6 +13,7 @@ As small javascript library for printing files silently without prompt.
 
 ## Usage 
 require the package and then call it by giving it a file to print and optionally a specific printer. if you do not provide the package with a specific printer, it will print to your default printer. 
+
     const SecretPrint = require("secretprint")
     SecretPrint("file to print", "name of specific printer (optional)") 
 
