@@ -1,5 +1,6 @@
 SecretPrint
 =========
+https://img.shields.io/github/license/mashape/apistatus.svg
 
 As small javascript library for printing files silently without prompt. 
 
