@@ -61,4 +61,4 @@ typings/
 .next
 
 # distrubtion folder
-/dist
+/lib

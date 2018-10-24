@@ -1,11 +1,12 @@
 {
   "name": "secretprint",
-  "version": "0.1.4",
+  "version": "0.1.43",
   "description": "a small javascript library for printing files silently without prompt. ",
   "main": "index.js",
   "scripts": {
     "test": "mocha --timeout 300 --compilers js:babel-register --reporter spec",
-    "build": "babel test --presets env --out-dir dist"
+    "build": "babel src --presets env --out-dir lib",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",

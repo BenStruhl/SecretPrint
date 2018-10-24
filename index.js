@@ -1,1 +1,1 @@
-module.exports = require('./src/secretprint.js')
+module.exports = require('./lib/secretprint.js')
